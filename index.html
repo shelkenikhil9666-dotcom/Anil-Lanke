@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>शिवसेना वैद्यकीय मदत कक्ष - जून २०२६ अहवाल</title>
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="शिवसेना वैद्यकीय मदत कक्ष - मा. श्री. अनिल चंद्रकांत लंके (जिल्हाप्रमुख, अहिल्यानगर दक्षिण) यांच्या जून २०२६ वैद्यकीय मदत कार्याचा अहवाल.">
+  <meta name="keywords" content="शिवसेना, वैद्यकीय मदत कक्ष, अनिल लंके, अहिल्यानगर, रुग्णसेवा, मुख्यमंत्री सहायता निधी, PMJAY">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="container top-nav">
+      <div class="nav-left">
+        <img src="images/logo.jpg" alt="शिवसेना वैद्यकीय मदत कक्ष" class="logo-img">
+        <div class="nav-title-group">
+          <h1>शिवसेना वैद्यकीय मदत कक्ष</h1>
+          <span>अहिल्यानगर दक्षिण</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <img src="images/founders.jpg" alt="बाळासाहेब ठाकरे व आनंद दिघे" class="founders-img">
+      </div>
+    </div>
+  </header>
+
+  <!-- Leader Banner Strip (Politicians in a row) -->
+  <div class="leader-strip">
+    <img src="images/leaders_row.jpg" alt="प्रमुख नेते">
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h2 id="hero-title">शिवसेना वैद्यकीय मदत कक्ष</h2>
+        <h3 id="hero-subtitle">जून २०२६ वैद्यकीय मदत कार्य अहवाल</h3>
+        <p class="motto" id="hero-motto">"रुग्णसेवा हीच खरी लोकसेवा"</p>
+        
+        <div class="badge-group">
+          <div class="badge">
+            <i class="fas fa-calendar-alt"></i>
+            <span id="report-duration">जून २०२६</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-check-circle"></i>
+            <span>अहवाल प्रकार: डिजिटल डॅशबोर्ड</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>महाराष्ट्र राज्य</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact/Leader Profile Card in Hero -->
+      <div class="hero-leader-profile">
+        <img src="images/anil_lanke.jpg" alt="अनिल लंके" id="hero-leader-img">
+        <div class="hero-leader-info">
+          <h4 id="hero-leader-name">मा. श्री. अनिल चंद्रकांत लंके</h4>
+          <p id="hero-leader-post">जिल्हाप्रमुख, अहिल्यानगर दक्षिण</p>
+          <span class="tag">कार्यप्रमुख</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Container for dashboard statistics (overlaps Hero slightly) -->
+  <div class="container">
+    <div class="stats-grid">
+      <!-- Card 1: Total Beneficiaries -->
+      <div class="stat-card navy-theme">
+        <div class="stat-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">एकूण लाभार्थी</span>
+          <span class="stat-value" id="stat-total-beneficiaries">0</span>
+          <span class="stat-subtext">मदत मिळालेले रुग्ण</span>
+        </div>
+      </div>
+
+      <!-- Card 2: CM Assistance Fund -->
+      <div class="stat-card saffron-theme">
+        <div class="stat-icon">
+          <i class="fas fa-hand-holding-medical"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">मंजूर आर्थिक मदत</span>
+          <span class="stat-value" id="stat-total-financial-help">₹0</span>
+          <span class="stat-subtext">थेट बँक खात्यात वर्ग</span>
+        </div>
+      </div>
+
+      <!-- Card 3: PMJAY (Cashless Treatment) -->
+      <div class="stat-card success-theme">
+        <div class="stat-icon">
+          <i class="fas fa-notes-medical"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">PMJAY मदत</span>
+          <span class="stat-value" id="stat-total-pmjay">₹0</span>
+          <span class="stat-subtext">मोफत कॅशलेस उपचार</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Hospital Bill Concession (Savings) -->
+      <div class="stat-card gold-theme">
+        <div class="stat-icon">
+          <i class="fas fa-percentage"></i>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">हॉस्पिटल बिल सवलत</span>
+          <span class="stat-value" id="stat-total-bill-savings">₹0</span>
+          <span class="stat-subtext">बिल कपात करून बचत</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Grand Total Benefit Badge -->
+    <div style="background: linear-gradient(90deg, var(--primary-navy) 0%, #1e3a8a 100%); color: var(--white); border-radius: 12px; padding: 15px 25px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm);">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <i class="fas fa-award" style="font-size: 2rem; color: var(--accent-gold);"></i>
+        <div>
+          <h4 style="font-size: 1.1rem; font-weight: 700;">एकूण वैद्यकीय लाभ (Grand Medical Benefit)</h4>
+          <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7)">आर्थिक मदत + कॅशलेस उपचार + बिल बचत</p>
+        </div>
+      </div>
+      <div class="stat-value" id="stat-grand-total" style="color: var(--accent-gold); font-size: 2.2rem; font-weight: 800;">₹0</div>
+    </div>
+  </div>
+
+  <!-- Key Highlights Section -->
+  <section class="container" style="padding-top: 0;">
+    <div class="section-header">
+      <div class="section-title">
+        <i class="fas fa-star"></i>
+        <h3>जून महिन्याची ठळक कामगिरी</h3>
+      </div>
+      <span class="section-subtitle">प्रमुख यश आणि उपलब्धी</span>
+    </div>
+    <div class="highlights-grid" id="highlights-container">
+      <!-- Highlights dynamic injection -->
+    </div>
+  </section>
+
+  <!-- Interactive Charts Section -->
+  <section style="background-color: #F8FAFC;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fas fa-chart-pie"></i>
+          <h3>मदत कार्य आलेख व विश्लेषण</h3>
+        </div>
+        <span class="section-subtitle">योजना व जिल्हानिहाय वाटा</span>
+      </div>
+      
+      <div class="charts-grid">
+        <!-- Chart 1: Scheme-wise -->
+        <div class="chart-card">
+          <h4><i class="fas fa-chart-donut"></i> योजनानिहाय मदत वाटप विश्लेषण</h4>
+          <div class="chart-wrapper">
+            <canvas id="schemeChart"></canvas>
+          </div>
+        </div>
+        
+        <!-- Chart 2: District-wise -->
+        <div class="chart-card">
+          <h4><i class="fas fa-chart-bar"></i> जिल्हानिहाय एकूण आर्थिक मदत</h4>
+          <div class="chart-wrapper">
+            <canvas id="districtChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- District-wise detailed help -->
+  <section class="container">
+    <div class="section-header">
+      <div class="section-title">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>जिल्हानिहाय मदत कार्य तपशील</h3>
+      </div>
+      <span class="section-subtitle">महाराष्ट्र राज्यातील कामगिरी</span>
+    </div>
+    <div class="districts-grid" id="districts-container">
+      <!-- Districts card injection -->
+    </div>
+  </section>
+
+  <!-- Disease/Surgery wise statistics -->
+  <section style="background-color: #F8FAFC;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fas fa-procedures"></i>
+          <h3>आजार व शस्त्रक्रियानिहाय मदत</h3>
+        </div>
+        <span class="section-subtitle">गंभीर आजारांसाठी मिळवून दिलेले उपचार</span>
+      </div>
+      <div class="diseases-grid" id="diseases-container">
+        <!-- Diseases dynamic injection -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficiary List table -->
+  <section class="container">
+    <div class="section-header">
+      <div class="section-title">
+        <i class="fas fa-list-ol"></i>
+        <h3>जून २०२६ लाभार्थी तपशीलवार यादी</h3>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-success" id="btn-export-csv">
+          <i class="fas fa-file-excel"></i> Excel डाउनलोड
+        </button>
+        <button class="btn btn-primary" id="btn-print">
+          <i class="fas fa-print"></i> PDF प्रिंट
+        </button>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <!-- Search Input -->
+        <div class="search-input-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-beneficiary" placeholder="रुग्णाचे नाव / रुग्णालय / आजार शोधा...">
+        </div>
+        
+        <!-- District Dropdown -->
+        <div class="select-wrapper">
+          <select id="filter-district">
+            <option value="">जिल्हा: सर्व</option>
+          </select>
+        </div>
+
+        <!-- Scheme Dropdown -->
+        <div class="select-wrapper">
+          <select id="filter-scheme">
+            <option value="">मदत प्रकार: सर्व</option>
+          </select>
+        </div>
+
+        <!-- Disease Dropdown -->
+        <div class="select-wrapper">
+          <select id="filter-disease">
+            <option value="">आजार: सर्व</option>
+          </select>
+        </div>
+        
+        <span id="filtered-count" style="font-weight: 700; color: var(--primary-navy);">एकूण: 0 रुग्ण</span>
+      </div>
+
+      <!-- Scrollable Table -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>अ.क्र.</th>
+              <th class="sortable" data-col="name">रुग्णाचे नाव <i class="fas fa-sort"></i></th>
+              <th class="sortable" data-col="district">जिल्हा <i class="fas fa-sort"></i></th>
+              <th class="sortable" data-col="scheme">मदत योजना/मार्ग <i class="fas fa-sort"></i></th>
+              <th class="sortable" data-col="disease">आजार / शस्त्रक्रिया <i class="fas fa-sort"></i></th>
+              <th>रुग्णालय <i class="fas fa-sort"></i></th>
+              <th>स्थिती</th>
+              <th class="sortable" data-col="amount" style="text-align: right;">मंजूर रक्कम (₹) <i class="fas fa-sort"></i></th>
+            </tr>
+          </thead>
+          <tbody id="beneficiary-table-body">
+            <!-- Table data dynamic injection -->
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Table Footer / Count summary -->
+      <div class="table-footer">
+        <span>* टीप: सदर माहिती शिवसेना वैद्यकीय मदत कक्षाच्या अधिकृत रेकॉर्डवरून घेण्यात आली आहे.</span>
+        <strong id="filtered-total" style="font-size: 1rem; color: var(--primary-saffron)">एकूण मदत रक्कम: ₹0/-</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section style="background-color: #F8FAFC;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fas fa-images"></i>
+          <h3>वैद्यकीय मदत पुरावे व छायाचित्रे</h3>
+        </div>
+        <span class="section-subtitle">मंजुरी पत्रे आणि अहवाल</span>
+      </div>
+      
+      <div class="gallery-grid">
+        <!-- Card 1: Official Banner -->
+        <div class="gallery-card" data-img="images/full_banner.jpg">
+          <div class="gallery-img-wrapper">
+            <img src="images/full_banner.jpg" alt="अधिकृत मदत प्रसिद्धी बॅनर">
+            <div class="gallery-hover-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 class="gallery-title">अधिकृत मदत प्रसिद्धी बॅनर</h4>
+            <p class="gallery-desc">वात्सल्य रुग्णालय, शिरूर (१ लाख रुपये मदत प्रसिद्धी)</p>
+          </div>
+        </div>
+
+        <!-- Card 2: CM Fund Letter -->
+        <div class="gallery-card" data-img="images/full_banner.jpg">
+          <div class="gallery-img-wrapper">
+            <!-- Crop CM Fund Letter section of banner to highlight CM Letter in preview -->
+            <img src="images/full_banner.jpg" style="object-position: left center;" alt="मुख्यमंत्री मदत निधी मंजुरी पत्र">
+            <div class="gallery-hover-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 class="gallery-title">मुख्यमंत्री मदत निधी मंजुरी पत्र</h4>
+            <p class="gallery-desc">रुग्ण: नम्रता घोरपडे (मुलगा), मंजुरी रक्कम ₹१,००,०००/-</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Handwritten Sheet -->
+        <div class="gallery-card" data-img="images/handwritten_sheet.jpg">
+          <div class="gallery-img-wrapper">
+            <img src="images/handwritten_sheet.jpg" alt="जून २०२६ हस्तलिखित अहवाल नोंद">
+            <div class="gallery-hover-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 class="gallery-title">जून २०२६ हस्तलिखित अहवाल नोंद</h4>
+            <p class="gallery-desc">अनिलभाऊ लंके यांच्या स्वाक्षरीने तयार केलेली मूळ आकडेवारी</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Screen Lightbox Modal -->
+  <div class="lightbox" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close"><i class="fas fa-times"></i></button>
+      <img src="" alt="" class="lightbox-img">
+      <div class="lightbox-caption">विवरण</div>
+    </div>
+  </div>
+
+  <!-- Contact & Location Info Section -->
+  <section class="container">
+    <div class="section-header">
+      <div class="section-title">
+        <i class="fas fa-id-card"></i>
+        <h3>शिवसेना वैद्यकीय मदत कक्ष संपर्क</h3>
+      </div>
+      <span class="section-subtitle">थेट मदत मिळवण्यासाठी संपर्क साधा</span>
+    </div>
+    
+    <div class="contacts-grid" id="contacts-container">
+      <!-- Contact Cards Dynamic Injection -->
+    </div>
+    
+    <!-- Location Google Map Placeholder (Styled Premium) -->
+    <div style="margin-top: 40px; background: var(--white); border-radius: 16px; border: 1px solid var(--border-gray); padding: 15px; box-shadow: var(--shadow-sm); overflow: hidden;">
+      <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-map-marker-alt" style="color: var(--primary-saffron);"></i> मुख्य कार्यालय: अहिल्यानगर दक्षिण
+      </h4>
+      <div style="width: 100%; height: 300px; border-radius: 10px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: var(--text-light); flex-direction: column; gap: 10px;">
+        <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--primary-navy);"></i>
+        <span style="font-weight: 600;">शिवसेना कार्यालय, अहमदनगर (अहिल्यानगर), महाराष्ट्र</span>
+        <a href="https://maps.google.com/?q=Shivsena+Office+Ahmednagar" target="_blank" class="btn btn-primary" style="margin-top: 10px;">
+          <i class="fas fa-directions"></i> गुगल मॅपवर दिशा मिळवा
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p><strong>शिवसेना वैद्यकीय मदत कक्ष © 2026</strong>. सर्व हक्क राखीव.</p>
+      <p>संकल्पना व अंमलबजावणी: <strong>मा. श्री. अनिल चंद्रकांत लंके</strong> (जिल्हाप्रमुख, अहिल्यानगर दक्षिण)</p>
+      <p>अधिकृत ईमेल: <strong>shivsenavaidyakiyahelp@gmail.com</strong></p>
+      <p class="footer-tagline">"रुग्णसेवा हीच खरी लोकसेवा"</p>
+    </div>
+  </footer>
+
+  <!-- External Library CDNs (ChartJS, XLSX for excel, and local JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
